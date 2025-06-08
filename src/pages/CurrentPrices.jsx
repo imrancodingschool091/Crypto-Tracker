@@ -12,7 +12,7 @@ const CurrentPrices = () => {
   useEffect(() => {
     dispatch(fetchCryptoPrices());
     
-    // Set up interval for auto-refresh every 30 minutes
+    // auto refresh after 30 minutes
     const interval = setInterval(() => {
       dispatch(fetchCryptoPrices());
     }, 30 * 60 * 1000);
